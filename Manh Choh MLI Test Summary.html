@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manh Choh MLI 2021 Met Test Summary</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/ChiefMetDing/MC/main/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-12 jumbotron text-center" style="background-color:rgb(167, 167, 0);">
+                <h1 style="color:white;">Manh Choh MLI 2021 Met Test Result Dashboard</h1>
+                <p style="color:white;">Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <select id="select-unit" onchange="unit(this.value)">
+                <option>Make Sense Units</option>
+                <option>Doesn't Make Sense Units</option>
+            </select>
+        </div> -->
+        <div class="row">
+            <div class="col-md-6">
+                <div id="box-1"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="box-2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="box-3"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="box-4"></div>
+            </div>
+        </div>
+        <!-- Adding form here -->
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <form id="form-1">
+                    <p>Criteria</p>
+                    <ul class="list-group bg-dark">
+                        <li class="list-group-item bg-dark">
+                            <label for="gold_price">
+                                Gold Price (USD/troy ounce)
+                            </label>
+                            <input type="text" placeholder="1300" id="gold_price" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="silver_price">
+                                Silver Price (USD/troy ounce)
+                            </label>
+                            <input type="text" placeholder="20" id="silver_price" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="nacn_price">
+                                NaCN (solid) Price (USD/lb)
+                            </label>
+                            <input type="text" placeholder="1.30" id="nacn_price" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="lime_price">
+                                Lime (hydrated) Price (USD/lb)
+                            </label>
+                            <input type="text" placeholder="0.24" id="lime_price" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="cement_price">
+                                Cement (Portland Type I/II) Price (USD/lb)
+                            </label>
+                            <input type="text" placeholder="0.13" id="cement_price" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="pbn_price">
+                                Lead Nitrate Price (USD/lb)
+                            </label>
+                            <input type="text" placeholder="1.30" id="pbn_price" />
+                        </li>
+                    </ul>
+                    <div>
+                        <button id="barApply" type="button" class="btn btn-black">
+                            Apply
+                        </button>
+                    </div>
+                </form>
+            </div> -->
+            <!-- Forms finished -->
+            <!-- <div class="col-md-8">
+                <div id="box-5"></div>
+            </div>
+        </div> -->
+        <!-- Box charts summary finished -->
+        <div class="row">
+            <div class="col-md-6">
+                <div id="scatter-1"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="scatter-2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="scatter-3"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="scatter-4"></div>
+            </div>
+        </div>
+        <!-- Adding form here -->
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <form id="form-2">
+                    <p>Criteria</p>
+                    <ul class="list-group bg-dark">
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_sulfide_tons">
+                                Main Peak Sulfide Tonnage (million short ton)
+                            </label>
+                            <input type="text" placeholder="3.339863" id="mpsx_ton" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_oxide_tons">
+                                Main Peak Oxide Tonnage (million short ton)
+                            </label>
+                            <input type="text" placeholder="0.305508" id="mpox_ton" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_sulfide_tons">
+                                North Peak Sulfide Tonnage (million short ton)
+                            </label>
+                            <input type="text" placeholder="0.649423" id="npsx_ton" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_oxide_tons">
+                                North Peak Oxide Tonnage (million short ton)
+                            </label>
+                            <input type="text" placeholder="1.214740" id="npox_ton" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_sulfide_oz">
+                                Main Peak Sulfide Gold (troy ounces)
+                            </label>
+                            <input type="text" placeholder="672680" id="mpsx_oz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_oxide_oz">
+                                Main Peak Oxide Gold (troy ounces)
+                            </label>
+                            <input type="text" placeholder="51832" id="mpox_oz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_sulfide_oz">
+                                North Peak Sulfide Gold (troy ounces)
+                            </label>
+                            <input type="text" placeholder="278549" id="npsx_oz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_oxide_oz">
+                                North Peak Oxide Gold (troy ounces)
+                            </label>
+                            <input type="text" placeholder="610530" id="npox_oz" />
+                        </li>
+
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_sulfide_soz">
+                                Main Peak Sulfide Silver (troy ounces)
+                            </label>
+                            <input type="text" placeholder="785363" id="mpsx_soz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="main_peak_oxide_soz">
+                                Main Peak Oxide Silver (troy ounces)
+                            </label>
+                            <input type="text" placeholder="36607" id="mpox_soz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_sulfide_soz">
+                                North Peak Sulfide Silver (troy ounces)
+                            </label>
+                            <input type="text" placeholder="1300" id="npsx_soz" />
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="north_peak_oxide_soz">
+                                North Peak Oxide Silver (troy ounces)
+                            </label>
+                            <input type="text" placeholder="1300" id="npox_soz" />
+                        </li>
+
+                    </ul>
+                    <div>
+                        <button id="scatterApply" type="button" class="btn btn-black">
+                            Apply
+                        </button>
+                    </div>
+                </form>
+            </div>
+            Forms finished -->
+            <!-- <div class="col-md-8">
+                <div id="scatter-5"></div>
+            </div>
+        </div> -->
+        <!-- Box charts summary finished -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="well">
+                <h5>Test Selection:</h5>
+                    <!-- <select id="select-1-0" multiple onchange="optionChanged_1(this.value)"></select> -->
+                    <select id="select-1" multiple onchange="optionChanged_2(this.value)"></select>
+                    <ul id="selected_items"></ul>
+                </div>
+                <div>
+                    <button id="kApply" type="button" class="btn btn-black">
+                        Apply
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="kinetics-1"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="select-2"></div>
+            </div>
+            <div class="col-md-9">
+                <div id="kinetics-2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="select-3"></div>
+            </div>
+            <div class="col-md-9">
+                <div id="kinetics-3"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="select-4"></div>
+            </div>
+            <div class="col-md-9">
+                <div id="kinetics-4"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://raw.githubusercontent.com/ChiefMetDing/MC/main/static/js/offline.js"></script> 
+
+</body>
+</html>
