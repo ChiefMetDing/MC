@@ -1,0 +1,9 @@
+body {
+    color:black;
+    background-color:white;
+}
+.jumbotron {
+    background-image: url("https://s2.q4cdn.com/496390694/files/images/home/home_slider/home-slide4.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
