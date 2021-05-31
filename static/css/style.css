@@ -1,9 +1,42 @@
 body {
     color:black;
     background-color:white;
+    background-image:url("https://s2.q4cdn.com/496390694/files/images/media_gallery/fortknox/Fort-Knox-Gold-Pour.jpg") ;
+    background-size: 100%
 }
 .jumbotron {
-    background-image: url("https://s2.q4cdn.com/496390694/files/images/home/home_slider/home-slide4.jpg");
+    background-image: url("https://s2.q4cdn.com/496390694/files/images/media_gallery/peek-gold/peek-gold-img2.jpg");
     background-size: 100% 100%;
     text-align: center;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    top: 0;
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+  }
+  
+li {
+    float: left;
+  }
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(255, 166, 0);
+  }
+table{
+    background-color: rgb(255, 255, 255);
+}
+  
